@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #011F26;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+main .jokes,
+main .saved-jokes {
+    margin-bottom: 20px;
+}
+
+main h5 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+main .jokes__buttons,
+main .saved-jokes__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main .jokes__buttons .button,
+main .saved-jokes__buttons .button {
+    padding: 10px 20px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    background: rgba(60, 162, 162, 0.6);
+}
+
+main .jokes__buttons .button--next,
+main .saved-jokes__buttons .button--next {
+    background-color: #03A688;
+}
+
+main .jokes__buttons .button--save,
+main .saved-jokes__buttons .button--save {
+    background-color: #026873;
+}
+
+main .jokes__buttons .button--unsave,
+main .saved-jokes__buttons .button--unsave {
+    background-color: #e76f51;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main .jokes__buttons .button:hover,
+main .saved-jokes__buttons .button:hover {
+    background-color: #028090;
+    transform: translateY(-3px);
+}
+
+main .jokes__buttons .button--unsave:hover,
+main .saved-jokes__buttons .button--unsave:hover {
+    background-color: #e14a24;
+    transform: translateY(-3px);
+}
+
+main .jokes__buttons .button:active,
+main .saved-jokes__buttons .button:active {
+    transform: translateY(1px);
+}
+
+main .jokes__buttons .button--unsave:focus,
+main .saved-jokes__buttons .button--unsave:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.5);
+}
+
+.saved-jokes__view {
+    max-height: 50vh;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.saved-joke {
+    background-color: #025E73;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.saved-joke p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.saved-joke .button--unsave {
+    margin-top: 10px;
+    padding: 12px 100px;
+    background-color: #b44865;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.saved-joke .button--unsave:hover {
+    background-color: #e55f76;
+    transform: translateY(-2px);
+}
+
+
+.saved-joke .button--unsave:active {
+    transform: translateY(1px);
+}
+
+
+.saved-joke .button--unsave:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(242, 102, 139, 0.3);
+}
+
+
+@media (max-width: 600px) {
+    #app {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main .jokes__buttons,
+    main .saved-jokes__buttons {
+        flex-direction: column;
+    }
+
+    main .jokes__buttons .button,
+    main .saved-jokes__buttons .button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+

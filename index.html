@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+          <h1>JokeApp</h1>
+        </header>
+        
+        <main>
+          <section class="jokes">
+            <article>
+              <h5 id="jokeText">Wenn du lachen willst, klicke auf 'Next'!</h5>
+            </article>
+            <div class="jokes__buttons">
+              <button class="button button--next" onclick="joke()">Next</button>
+              <button class="button button--save" onclick="saveJoke()">Save it!<span><span></span></span></button>
+            </div>
+          </section>
+  
+          <section class="saved-jokes" >
+            <div id="savedJokesContainer" class="saved-jokes__view">
+            </div>
+          </section>
+          
+        </main>
+      </div>
+</body>
+</html>
