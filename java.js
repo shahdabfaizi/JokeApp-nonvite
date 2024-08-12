@@ -86,7 +86,3 @@ function unsaveJoke(id) {
 window.onload = function() {
     displaySavedJokes();
 };
-
-window.onload = function() {
-    displaySavedJokes();
-};
