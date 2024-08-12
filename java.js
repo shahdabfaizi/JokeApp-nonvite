@@ -27,17 +27,25 @@ function generateId() {
 function saveJoke() {
     if (currentJoke) {
         let savedJokes = JSON.parse(localStorage.getItem('savedJokes')) || [];
-        const jokeWithId = {
-            id: generateId(),
-            text: currentJoke
-        };
-        savedJokes.push(jokeWithId);
-        localStorage.setItem('savedJokes', JSON.stringify(savedJokes));
-        displaySavedJokes();
+
+        const isJokeAlreadySaved = savedJokes.some(joke => joke.text === currentJoke);
+
+        if (!isJokeAlreadySaved) {
+            const jokeWithId = {
+                id: generateId(),
+                text: currentJoke
+            };
+            savedJokes.push(jokeWithId);
+            localStorage.setItem('savedJokes', JSON.stringify(savedJokes));
+            displaySavedJokes();
+        } else {
+            console.log("Dieser Witz ist bereits gespeichert.");
+        }
     } else {
         console.error("Kein Witz zum Speichern vorhanden.");
     }
 }
+
 
 function displaySavedJokes() {
     const savedJokesContainer = document.getElementById('savedJokesContainer');
